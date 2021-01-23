@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="utf-8">
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="static\style7.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <style>
+        #sub{
+           background-color: rosybrown;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+
+       }
+       #sub:hover{
+           opacity: 0.8;
+       }
+
+    </style>
+</head>
+<body>
+    <div class="banner-text">
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact</li>
+    </ul>
+
+     <h2>Welcome to our Website ;)</h2>
+
+    </div>
+    <div class="animation-area">
+         <ul class="box-area">
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+        </ul>
+    </div>
+<center>
+
+  <form .class="f1" action="{{ url_for("root")}}" method="POST" class="ww">
+    <br><br>
+    <label for="Location">Select a location :</label>
+
+        <select name="Location" id="Loc">
+            <option value="Slg">Siliguri</option>
+            <option value="Jpg">Jalpaiguri</option>
+            <option value="KOl">Kolkata</option>
+            <option value="Gtk">Gangtok</option>
+        </select>
+        <br><br>
+
+        <label for="Tmax">Temperture maximum(Tmax):</label>
+        <input type="text" id="temp1" name="tempmax"required >
+        <br><br>
+        <label for="Tmin">Temperture minimum(Tmin):</label>
+        <input type="text" id="temp2" name="tempmin" required >
+    <br><br>
+        <label for="wss">Wind speed........................:</label>
+        <input type="text" id="ws" value="-1" name="windspeed">
+    <br><br>
+        <label for="rss">Relative speed..................:</label>
+        <input type="text" id="rs" value="-1" name="relativespeed">
+    <br><br>
+        <label for="rhh">Relative humidity..............:</label>
+        <input type="text" id="rh" value="-1" name="relativehum">
+         <br><br>
+        <button id="sub" type="submit">CLICK TO SEE</button>
+         <br><br>
+    </form>
+</center>
+</body>
+</html>
